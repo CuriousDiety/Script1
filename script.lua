@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("WladoshkaHub", "DarkTheme")
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Player")
-Section:NewToggle("Super Walkspeed", "TIncreases your Walkspeed", function(state)
+Section:NewToggle("Super Walkspeed", "Increases your Walkspeed", function(state)
     if state then
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
     else
@@ -10,7 +10,7 @@ Section:NewToggle("Super Walkspeed", "TIncreases your Walkspeed", function(state
     end
 end)
 
-Section:NewToggle("Super JumpPower", "Increases your Walkspeed", function(state)
+Section:NewToggle("Super JumpPower", "Increases your JumpPower", function(state)
 if state then
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
 else
