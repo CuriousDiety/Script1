@@ -1,21 +1,15 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("WladoshkaHub", "DarkTheme")
+local Window = Library.CreateLib("WladoshkaHub", "BloodTheme")
+
+-- PLAYER
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Player")
-Section:NewToggle("Super Walkspeed", "Increases your Walkspeed", function(state)
-    if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
-    else
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end
+Section:NewSlider("Walkspeed  ", "Increases your Walkspeed", 300, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-Section:NewToggle("Super JumpPower", "Increases your JumpPower", function(state)
-if state then
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
-else
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-end
+Section:NewSlider("Jumppower  ", "Increases your JumpPower", 300, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
 Section:NewButton("Infinite Yield", "Loads InfiniteYield Admin", function()
